@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "wiki-front-6f0fb": {
+      "hosting": {
+        "wiki-front": [
+          "wiki-front-6f0fb"
+        ]
+      }
+    }
+  }
+}
