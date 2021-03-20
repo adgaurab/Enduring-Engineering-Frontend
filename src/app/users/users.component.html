@@ -1,0 +1,71 @@
+<app-nav></app-nav>
+
+<div class="row" style="margin: auto;">
+
+<form  #myform = "ngForm" (ngSubmit) = "onSubmit(myform)" >
+
+    <div class="form-group row">
+      <div class="col-md">
+        <input type = "text" required name = "first_name" placeholder = "Your full name" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md">
+        <input type = "text" required name = "last_name" placeholder = "Your last name" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md">
+        <input type = "enail" required name = "email" placeholder = "Your email address" ngModel>
+      </div>
+    </div>
+
+    <!-- <div class="form-group row">
+      <div class="col-md">
+        <input type = "text" name = "dbay" placeholder = "Your birth date" ngModel>
+      </div>
+    </div> -->
+
+    <div class="form-group row">
+      <div class="col-md">
+        <input type = "text" required name = "language" placeholder = "Language" ngModel>
+
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md">
+        <input type = "text" name = "Country" placeholder = "Your Country" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md">
+        <input  type = "text" required name = "Organisation" placeholder = "Organisation name" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md">
+        <input  type = "text" name = "Totem" placeholder = "Totem" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md">
+        <input  type = "password" required name = "password" placeholder = "Password" ngModel>
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <div class="col-md">
+        <input  type = "password" required name = "password1" placeholder = "Comfirm Pssword" ngModel>
+      </div>
+    </div>
+
+  <button type="submit" value = "Send" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Create Acccount</button>
+</form>
+</div>

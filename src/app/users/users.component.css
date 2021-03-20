@@ -1,0 +1,22 @@
+.row{
+  margin-left: 10%;
+}
+
+
+button{
+
+  margin-left: 80px;
+  margin-top: 5px;
+
+}
+
+form {
+  width: 50%;
+  margin-left : 17%;
+  margin-top: 100px;
+}
+
+input {
+  width: 208px;
+  height: 36px;
+}

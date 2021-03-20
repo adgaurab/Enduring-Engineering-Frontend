@@ -1,0 +1,67 @@
+<app-nav></app-nav>
+<div *ngIf="!isShown" id='main'>
+    <h1><b>{{ title }}</b></h1>
+    <p>{{ language }}</p>
+    <h3>Location : {{ place }} </h3>
+    <p>Image</p>
+    <img id="myimage" [src]='image' /><br><br>
+
+    <h3><b>Authors : {{ full_name }} </b></h3>
+
+    <h3>Email : {{ mail }} </h3>
+
+    <div *ngIf="!istoken">
+        <b>Description</b><br>
+        <p id="dis">{{ short_dis }} ........</p>
+    </div>
+
+
+    <div *ngIf="istoken">
+        <b>Description</b><br>
+        <p id="dis">{{ description }}</p>
+    </div>
+
+    <div>
+        <a (click)="request()" *ngIf="istoken" href="#">This is private knowledge. To Access this article please contact the
+      Author and request for permission.</a>
+    </div>
+
+    <div *ngIf="!istoken">
+        <b>Intro</b><br>
+        <p id="dis">{{ introduction }}</p>
+    </div>
+
+    <div *ngIf="!istoken">
+        <b>BACKGROUND</b><br>
+        <p id="dis">{{ background }}</p>
+    </div>
+
+    <div *ngIf="!istoken">
+        <b>PURPOSE</b><br>
+        <p id="dis">{{ purpose_of_paper }}</p>
+    </div>
+
+    <div *ngIf="!istoken">
+        <b>METHODS</b><br>
+        <p id="dis">{{ methods_of_teaching }}</p>
+    </div>
+
+
+    <div *ngIf="!istoken">
+        <b>DISCUSSION</b><br>
+        <p id="dis">{{ discussion }}</p>
+    </div>
+
+    <div *ngIf="!istoken">
+        <b>CONCLUSION</b><br>
+        <p id="dis">{{ conclusion }}</p>
+    </div>
+
+
+</div>
+
+<div *ngIf="isShown" class="d-flex justify-content-center">
+    <div class="spinner-border" style="width: 12rem; height: 12rem; margin-top: 100px;" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>

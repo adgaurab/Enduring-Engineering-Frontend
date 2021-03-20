@@ -1,0 +1,75 @@
+<app-nav></app-nav>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+<div *ngIf="!isShown" class="container">
+    <label>title:
+    <input [(ngModel)]="title" placeholder="title"/>
+  </label>
+
+    <span><p>Image</p>
+  <img id="myimage" [src]='image' /></span><br><br>
+
+    <label>description: </label><br>
+    <textarea [(ngModel)]="description" placeholder="description">]
+      </textarea><br>
+
+    <label>place:   </label><br>
+    <textarea [(ngModel)]="place" placeholder="place">
+
+  <label>introduction:   </label><br>
+    <textarea [(ngModel)]="introduction" placeholder="introduction">
+</textarea><br>
+    <label>background:   </label><br>
+    <textarea [(ngModel)]="background" placeholder="background">
+ <br>
+  <label>purpose_of_paper:   </label><br>
+    <textarea [(ngModel)]="purpose_of_paper" placeholder="purpose_of_paper">
+  <br>
+  <label>methods_of_teaching:
+    <textarea [(ngModel)]="methods_of_teaching" placeholder="methods_of_teaching">
+</textarea>
+    <br>
+    <label>discussion:   </label><br>
+    <textarea [(ngModel)]="discussion" placeholder="discussion">
+</textarea>
+    <br>
+    <label>conclusion:   </label><br>
+    <textarea [(ngModel)]="conclusion" placeholder="conclusion">
+</textarea>
+    <br>
+    <label>place_name: </label><br>
+    <textarea [(ngModel)]="place" placeholder="place">
+</textarea>
+    <br>
+    <label>language:   </label><br>
+    <textarea [(ngModel)]="language" placeholder="language">
+      <br>
+      <div class="form-group">
+        <label for="tag">Tag  : </label>
+        <select [(ngModel)]="tag" required>
+      <option  value="story">Story Telling and Cultur</option>
+      <option  value="water">Water Management</option>
+      <option  value="Civil">Civil</option>
+      <option  value="sustainability">Sustainability</option>
+      <option  value="nano">Nano Technology</option>
+      <option  value="mining">Mining</option>
+      <option  value="info">Information Technology</option>
+      <option  value="electrical">Electrical</option>
+      <option  value="finances">Finances</option>
+      <option  value="bio">Bio Medical</option>
+      <option  value="acoustics">Acoustics</option>
+      <option  value="project">Project Management</option>
+    </select>
+    </div>
+ <br>
+  <label>image_id:   </label><br>
+    <textarea [(ngModel)]="image_id" placeholder="image_id">
+</textarea>
+    <input type="submit" (click)="save()" value="Update Article">
+</div>
+
+<div *ngIf="isShown" class="d-flex justify-content-center">
+    <div class="spinner-border" style="width: 12rem; height: 12rem; margin-top: 100px;" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>

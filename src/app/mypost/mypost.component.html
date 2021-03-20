@@ -1,0 +1,21 @@
+<app-nav></app-nav>
+
+<h2>My Article</h2>
+
+
+<ul class="myposts">
+    <li *ngFor="let mypost of myposts">
+        <a routerLink="/post/{{mypost.id}}">
+            <span class="badge">{{mypost.id}}</span> {{mypost.title}}
+        </a>
+        <button><a routerLink="/editarticle/{{mypost.id}}"> edit
+    </a></button>
+        <button class="delete" title="delete mypost" (click)="delete(mypost)">x</button>
+    </li>
+</ul>
+
+<div *ngIf="isShown" class="d-flex justify-content-center">
+    <div class="spinner-border" style="width: 12rem; height: 12rem; margin-top: 100px;" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>

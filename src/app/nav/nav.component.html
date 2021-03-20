@@ -1,0 +1,92 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="islogin" href="login">Sing In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="istoken" href="addPost">Add Article</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="istoken" href="mypost">My Post</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="islogin" href="user">Sign Up</a>
+            </li>
+            <li class="nav-item" id="search">
+                <form id="post_form" action="" method="post" enctype="multipart/form-data" class="form-horizontal" [formGroup]="loginForm" (click)="refresh()">
+                    <input type="text" id="place" formControlName="place">
+                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i>search </button>
+                </form>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="istoken" href="#" (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<fieldset>
+    <div class="chip-group">
+        <div class="chip">
+            <i class="material-icons">event</i>
+            <a href="tag-article/story">Story Telling and Culture</a>
+        </div>
+        <div class="chip">
+            <i class="material-icons">work</i>
+            <a href="tag-article/water">Water Management</a>
+        </div>
+        <div class="chip">
+            <i class="material-icons">event</i>
+            <a href="tag-article/civil">Civil</a>
+        </div>
+        <div class="chip">
+            <i class="material-icons">work</i>
+            <a href="tag-article/sustainability">Sustainability</a>
+        </div>
+        <div class="chip">
+            <i class="material-icons">event</i>
+            <a href="tag-article/nano">Nano Technology</a>
+        </div>
+        <div class="chip">
+            <i class="material-icons">work</i>
+            <a href="tag-article/mining">Mining</a>
+        </div>
+        <div class="chip">
+            <i class="material-icons">event</i>
+            <a href="tag-article/info">Information Technology</a>
+        </div>
+        <div class="chip">
+            <i class="material-icons">work</i>
+            <a href="tag-article/electrical">Electrical</a>
+        </div>
+        <div class="chip">
+            <i class="material-icons">event</i>
+            <a href="tag-article/finances">Finances</a>
+        </div>
+        <div class="chip">
+            <i class="material-icons">work</i>
+            <a href="tag-article/bio">Bio Medical</a>
+        </div>
+        <div class="chip">
+            <i class="material-icons">event</i>
+            <a href="tag-article/acoustics">Acoustics</a>
+        </div>
+        <div class="chip">
+            <i class="material-icons">work</i>
+            <a href="tag-article/chemical">Chemical</a>
+        </div>
+        <div class="chip">
+            <i class="material-icons">work</i>
+            <a href="tag-article/project">Project Management</a>
+        </div>
+    </div>
+</fieldset>
